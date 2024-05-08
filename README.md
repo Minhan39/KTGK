@@ -1,7 +1,9 @@
-**ID: 2024802010378**
+**Họ và tên: Phạm Minh An**
+**MSSV: 2024802010378**
 
-**NAME: PHAM MINH AN**
 
-data: https://server-contact-9txe.onrender.com/
+Mã nguồn nằm trong folder src_gk do em sử dụng project từ các lab cũ để tiết kiệm thời gian
 
-https://github.com/Minhan39/PracticeLab/assets/81009449/c1f6af68-50ce-42cd-b73d-95829c4bfa92
+Video demo:
+
+https://github.com/Minhan39/KTGK/assets/81009449/b2491c51-cdaa-43d1-9408-92f0d6b5599c
