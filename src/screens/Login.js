@@ -1,10 +1,12 @@
 import React from 'react';
 import {StyleSheet, View} from 'react-native';
-import {Button, TextInput, useTheme} from 'react-native-paper';
+import {Button, Text, TextInput, useTheme} from 'react-native-paper';
 import auth from '@react-native-firebase/auth';
 import {GoogleSignin} from '@react-native-google-signin/google-signin';
+import {AuthContext} from '../context';
 
-const Login = () => {
+const Login = ({navigation}) => {
+  const context = React.useContext(AuthContext);
   const theme = useTheme();
   const [email, setEmail] = React.useState('');
   const [password, setPassword] = React.useState('');
@@ -32,8 +34,12 @@ const Login = () => {
     <View
       style={{
         ...styles.container,
-        backgroundColor: theme.colors.surfaceVariant,
       }}>
+      <Text
+        variant="headlineMedium"
+        style={{fontWeight: 'bold', color: theme.colors.primary}}>
+        LOGIN
+      </Text>
       <TextInput
         label="Email"
         style={{...styles.textinput}}
@@ -60,7 +66,9 @@ const Login = () => {
         onPress={() =>
           onGoogleButtonPress().then(value => {
             console.log('Signed in with Google!');
-            console.log(value);
+            console.log(value.user.displayName);
+            context.setUser(value.user);
+            navigation.navigate('Lab3Tabs');
           })
         }>
         Google Sign-In

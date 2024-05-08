@@ -1,11 +1,9 @@
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {NavigationContainer} from '@react-navigation/native';
-import BottomTabs from './BottomTabs';
+
 import Login from '../screens/Login';
 import Register from '../screens/Register';
-import ToDo from '../screens/ToDo';
-import Lab3Tabs from './Lab3Tabs';
-import Add from '../screens/Add';
+import Home from '../screens/Home';
 
 const Stack = createNativeStackNavigator();
 
@@ -17,10 +15,7 @@ const Root = () => {
         screenOptions={{headerShown: false}}>
         <Stack.Screen name="Login" component={Login} />
         <Stack.Screen name="Register" component={Register} />
-        <Stack.Screen name="ToDo" component={ToDo} />
-        <Stack.Screen name="BottomTabs" component={BottomTabs} />
-        <Stack.Screen name="Lab3Tabs" component={Lab3Tabs} />
-        <Stack.Screen name="Add" component={Add} />
+        <Stack.Screen name="Home" component={Home} />
       </Stack.Navigator>
     </NavigationContainer>
   );

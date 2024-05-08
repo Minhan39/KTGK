@@ -1,15 +1,13 @@
 import React from 'react';
-import Login from './src/screens/Login';
-import Profile from './src/screens/Profile';
-import ContactList from './src/screens/ContactList';
-import Favorites from './src/screens/Favorites';
-import User from './src/screens/User';
-import Options from './src/screens/Options';
-import BottomTabs from './src/navigations/BottomTabs';
-import Root from './src/navigations/Root';
+import Root from './src_gk/navigations/Root';
+import {StoreProvider} from './src_gk/store';
 
 const App = () => {
-  return <Root />;
+  return (
+    <StoreProvider>
+      <Root />
+    </StoreProvider>
+  );
 };
 
 export default App;
